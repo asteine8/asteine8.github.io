@@ -1,0 +1,72 @@
+#sidebar {
+    position: fixed;
+
+    /* visibility: hidden; */
+
+    width: 20%;
+    min-width: 175px;
+    max-width: 275px;
+    background-color: rgb(233, 233, 233);
+    border: 3px solid black;
+    padding: 10px;
+
+    z-index: 10;
+}
+
+#spacer {
+    position: static;
+
+    margin: none;
+    margin-right: 4%;
+
+    min-height: 100vh;
+    
+    float: left;
+
+    width: 20%;
+    /* min-width: 175px; */
+    max-width: 275px;
+
+    background-color: white;
+}
+
+#textholder {
+    position: static;
+    width: 70%;
+    /* min-width: 500px; */
+
+    min-height: 500px;
+
+    margin: none;
+    margin-top: 5px;
+
+    float: left;
+
+    background-color: rgb(233, 233, 233);
+    border: 3px solid black;
+}
+
+#preset_pronoun_list {
+    height: 100px;
+    width: 100%;
+}
+
+#selected_pronoun_list {
+    width: 100%;
+}
+
+#submitbutton {
+    background-color: #ffbb75;
+}
+
+.pnbox {
+    width:100%;
+}
+
+input,select {
+    background-color: rgba(255,255,255,0.55);
+}
+
+button {
+    background-color: lightskyblue;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Name and Pronoun Tryouts</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script src="parser.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body onload="onpageload()">
+        <div id="sidebar">
+            <h3>Enter a Name</h3>
+
+            <input type="text" id="namebox" value="Roc">
+
+            <h3>Select A Pronoun Set(s)</h3>
+            
+            <select id="preset_pronoun_list" onchange="setPresetPronouns()" multiple>
+                <option value="They/Them/Their/Theirs/Theirself">They/Them/Their/Theirs/Theirself</option>
+                <option value="He/Him/His/His/Himself">He/Him/His/His/Himself</option>
+                <option value="She/Her/Her/Hers/Herself">She/Her/Her/Hers/Herself</option>
+                <option value="Ze/Hir/Hir/Hirs/Hirself">Ze/Hir/Hir/Hirs/Hirself</option>
+                <option value="Xe/Xem/Xyr/Xyrs/Xemself">Xe/Xem/Xyr/Xyrs/Xemself</option>
+                <option value="Ve/Ver/Vis/Vis/Virself">Ve/Ver/Vis/Vis/Virself</option>
+                <option value="Ey/Em/Eir/Eirs/Eirself">Ey/Em/Eir/Eirs/Eirself</option>
+            </select> <br>
+
+            <table style="width:100%;margin:none;">
+                <tr>
+                    <th>Subjective</th>
+                    <th><input id="subjective_pronoun_box" class="pnbox"></th>
+                </tr>
+                <tr>
+                    <th>Objective</th>
+                    <th><input id="subjective_pronoun_box" class="pnbox"></th>
+                </tr>
+                <tr>
+                    <th>Posessive Determiner</th>
+                    <th><input id="subjective_pronoun_box" class="pnbox"></th>
+                </tr>
+                <tr>
+                    <th>Posessive</th>
+                    <th><input id="subjective_pronoun_box" class="pnbox"></th>
+                </tr>
+                <tr>
+                    <th>Reflexive</th>
+                    <th><input id="subjective_pronoun_box" class="pnbox"></th>
+                </tr>
+            </table>
+            
+
+            <button id="addpronouns">Add Current Pronouns</button> <br>
+
+            <br> <b>Use Pronouns to Refer to Me?</b> <br>
+
+            <input type="radio" id="yespronounsradio"
+            name="yesnoradio" value="yes">
+            <label for="yespronounsradio">Yes</label> <br>
+
+            <input type="radio" id="nopronounsradio"
+            name="yesnoradio" value="no">
+            <label for="nopronounsradio">No</label>
+
+            <h3>Selected Pronoun Sets</h3>
+            <select id="selected_pronoun_list" multiple>
+
+            </select> <br>
+            
+            <button id="removepronouns">Remove Selected Pronoun Set</button> <br> <br>
+            
+            <button id="submitbutton">Submit Changes</button>
+        </div>
+
+        <div id="spacer"><br></div>
+
+        <div id="textholder">
+            
+        </div>
+    </body>
+</html>
