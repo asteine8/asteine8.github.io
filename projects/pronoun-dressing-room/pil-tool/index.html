@@ -37,9 +37,9 @@
         <div id="area">
             <h2>Pronoun Identification and Labeling Tool</h2>
 
-            <textarea id="input_text" rows="8" cols="75" onchange="generateTaggedText()">Oh, did you hear about Natalie’s newest creation? She made a beautiful painting of a campground that her family took her to back when she was a child. Natalie is sooo talented, I wish I was her.</textarea>
+            <textarea id="input_text" rows="12" cols="100" onchange="generateTaggedText()">Oh, did you hear about Natalie’s newest creation? She made a beautiful painting of a campground that her family took her to back when she was a child. Natalie is sooo talented, I wish I was her.</textarea>
             <br>
-            <textarea id="output_text" rows="8" cols="75" spellcheck="false"></textarea>
+            <textarea id="output_text" rows="12" cols="100" spellcheck="false"></textarea>
             <br>
             <b>Name: </b>
             <input type="text" id="name_box" value = "Natalie" size="15" onchange="generateTaggedText()">
@@ -48,6 +48,10 @@
                 <option value="She/Her/Her/Hers/Herself">She/Her/Her/Hers/Herself</option>
                 <option value="They/Them/Their/Theirs/Themself">They/Them/Their/Theirs/Themself</option>
                 <option value="He/Him/His/His/Himself">He/Him/His/His/Himself</option>
+                <option value="Ze/Hir/Hir/Hirs/Hirself">Ze/Hir/Hir/Hirs/Hirself</option>
+                <option value="Xe/Xem/Xyr/Xyrs/Xemself">Xe/Xem/Xyr/Xyrs/Xemself</option>
+                <option value="Ve/Ver/Vis/Vis/Virself">Ve/Ver/Vis/Vis/Virself</option>
+                <option value="Ey/Em/Eir/Eirs/Eirself">Ey/Em/Eir/Eirs/Eirself</option>
             </select> <br>
             <button id="convert_button" style="margin:10px;" onclick="generateTaggedText()">Convert</button>
         </div>

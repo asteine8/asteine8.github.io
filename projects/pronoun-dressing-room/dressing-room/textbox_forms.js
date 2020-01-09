@@ -19,10 +19,11 @@ function deleteCell(clicked_button) {
 function editCell(clicked_button) {
     let root_textbox = clicked_button.parentElement.parentElement;
 
-    let cell_p = root_textbox.childNodes[1].childNodes[1];
-    let cell_tarea = root_textbox.childNodes[1].childNodes[3];
+    let cell_p = root_textbox.getElementsByClassName("textbox_textalignmentdiv")[0].getElementsByTagName("P")[0];
+    let cell_tarea = root_textbox.getElementsByClassName("textbox_textalignmentdiv")[0].getElementsByTagName("TEXTAREA")[0];
 
-    cell_tarea.value = cell_p.textContent;
+    // console.log(cell_p);
+    // console.log(cell_tarea);
 
     cell_p.style.display = "none";
     cell_tarea.style.display = "block";
@@ -31,16 +32,15 @@ function editCell(clicked_button) {
 function applyEdits(clicked_button) {
     let root_textbox = clicked_button.parentElement.parentElement;
 
-    let cell_p = root_textbox.childNodes[1].childNodes[1];
-    let cell_tarea = root_textbox.childNodes[1].childNodes[3];
+    let cell_p = root_textbox.getElementsByClassName("textbox_textalignmentdiv")[0].getElementsByTagName("P")[0];
+    let cell_tarea = root_textbox.getElementsByClassName("textbox_textalignmentdiv")[0].getElementsByTagName("TEXTAREA")[0];
 
-    cell_p.innerHTML = cell_tarea.value;
+    // Apply changes to textbox
+    applyPronounsToTextbox(root_textbox);
 
     cell_p.style.display = "block";
     cell_tarea.style.display = "none";
 }
-
-
 
 function addCell() {
     let newTextBox = document.createElement("div");
@@ -49,6 +49,6 @@ function addCell() {
     newTextBox.className = "textbox";
     newTextBox.innerHTML = textbox_default_innerhtml;
 
-
     document.getElementById("textholder").insertBefore(newTextBox, adder_button);
 }
+

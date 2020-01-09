@@ -12,7 +12,7 @@
         <div id="sidebar">
             <h3>Enter a Name</h3>
 
-            <input type="text" id="namebox" value="Roc">
+            <input type="text" id="namebox" value="Aale">
 
             <h3>Select A Pronoun Set(s)</h3>
             
@@ -64,12 +64,12 @@
 
             <h3>Selected Pronoun Sets</h3>
             <select id="selected_pronoun_list" multiple>
-
+                <option value="Ve/Ver/Vis/Vis/Virself" id="Ve/Ver/Vis/Vis/Virself">Ve/Ver/Vis/Vis/Virself</option>
             </select> <br>
             
             <button id="removepronouns" onclick="removeSelectedPronouns()">Remove Selected Pronoun Set</button> <br> <br>
             
-            <button id="submitbutton">Submit Changes</button>
+            <button id="submitbutton" onclick="submitChanges()">Submit Changes</button>
         </div>
 
         <div id="spacer"><br></div>
@@ -78,14 +78,85 @@
 
             <div class="textbox">
                 <div class="textbox_textalignmentdiv">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+                    <p></p>
+                    <textarea>Oh, did you hear about {name}’s newest creation? {sub} made a beautiful painting of a campground that {pod} family took {obj} to back when {sub} was a child. {name} is sooo talented, I wish I was {obj}.</textarea>
                 </div>
 
                 <div class="textbox_buttonbox">
+                    <span class="credit_tag">u/AlexandraLikesCake</span>
                     <button onclick="applyEdits(this)">apply</button>
                     <button onclick="editCell(this)">edit</button>
-                    <button onclick="deleteCell(this)">delete</button>
+                    <button onclick="deleteCell(this)" disabled>delete</button>
+                </div>
+            </div>
+
+            <div class="textbox">
+                <div class="textbox_textalignmentdiv">
+                    <p></p>
+                    <textarea>Have you heard where {name} went last Thursday? I heard some rumors {sub} went out with {pod} friends to a spa in South LA. Ikr, and did you see how perfect {pod} hands look lately. We shook hands this morning and they are soooo soft. Like baby soft. I really need to ask {name} where {sub} went. And what {sub} did.<br><br>Oh, hi {name}, we were just talking about you. I hope you are having a wonderful New Years. We heard that you went to a place south last week and wanted to know what you had done to your hands?<br><br>No no no, they’re just so soooooft. Like, how?</textarea>
+                </div>
+
+                <div class="textbox_buttonbox">
+                    <span class="credit_tag">u/AlexandraLikesCake</span>
+                    <button onclick="applyEdits(this)">apply</button>
+                    <button onclick="editCell(this)">edit</button>
+                    <button onclick="deleteCell(this)" disabled>delete</button>
+                </div>
+            </div>
+
+            <div class="textbox">
+                <div class="textbox_textalignmentdiv">
+                    <p></p>
+                    <textarea>Hey {name}, {name} is one of the cutest names ever, I just adored every {name} I’ve ever met. What I would say to you is go for it and try out, but also don’t feel rushed and pressured to figure it out now. I am assuming you are a teen, sorry if Im wrong, but it’s ruff to figure who you are, I see some teens going as if wondering for a few months is a live or die in a rush kind a thing, but everyone has their own pace, take your time, not saying it has to wait for ever but just, take your time. I wish you all the luck and love 💕</textarea>
+                </div>
+
+                <div class="textbox_buttonbox">
+                    <span class="credit_tag">u/Luli-Pinto</span>
+                    <button onclick="applyEdits(this)">apply</button>
+                    <button onclick="editCell(this)">edit</button>
+                    <button onclick="deleteCell(this)" disabled>delete</button>
+                </div>
+            </div>
+
+            <div class="textbox">
+                <div class="textbox_textalignmentdiv">
+                    <p></p>
+                    <textarea>{name} is just in the other room changing.<br><br>No, I don’t think {sub} forgot to bring the paintings. So the other day during the heist, I saw {obj} slip the paintings into that bag of {pop}. I know {name} brought it into the car, and Zoe told me {sub} saw the same bag in {pod} car. Why don’t we go ask {name} if {sub} has the paintings to be sure?<br><br>Well, why don’t you trust {name}, I trust {obj}. I doubt {sub} would ever keep that painting for {ref}, {name} just isn’t that kind of person.<br><br>Oh, hi {name}, we were just talking about the paintings from Thursday. Nat here was wondering if you had them in your car Wonderful!<br><br>See Nat, we can trust {obj}. Now go and get those bloody painting so we can meet the fence.</textarea>
+                </div>
+
+                <div class="textbox_buttonbox">
+                    <span class="credit_tag">u/AlexandraLikesCake</span>
+                    <button onclick="applyEdits(this)">apply</button>
+                    <button onclick="editCell(this)">edit</button>
+                    <button onclick="deleteCell(this)" disabled>delete</button>
+                </div>
+            </div>
+
+            <div class="textbox">
+                <div class="textbox_textalignmentdiv">
+                    <p></p>
+                    <textarea>Did you hear about what {name} did last week? {sub} went hiking up the nearby mountains and carried a keyboard up with {obj}. Like, omg, {sub} carried an electric keyboard on {pod} back like 15 miles up the face of a cliff, camped near the top, and spent the whole bloody next day playing the Tetris theme to the wind and clouds. I just hope that the keyboard is actually {pop}, that thing looks pretty banged up from being carried that far.</textarea>
+                </div>
+
+                <div class="textbox_buttonbox">
+                    <span class="credit_tag">u/AlexandraLikesCake</span>
+                    <button onclick="applyEdits(this)">apply</button>
+                    <button onclick="editCell(this)">edit</button>
+                    <button onclick="deleteCell(this)" disabled>delete</button>
+                </div>
+            </div>
+
+            <div class="textbox">
+                <div class="textbox_textalignmentdiv">
+                    <p></p>
+                    <textarea>Hey, it's {name}! {sub}'s so cute and smart! {name} is real good with computers too, {sub} helped me out recently. I hope I'll be meeting {obj} again soon, I love to hang out with {obj}!</textarea>
+                </div>
+
+                <div class="textbox_buttonbox">
+                    <span class="credit_tag">u/Dojo-Tekina</span>
+                    <button onclick="applyEdits(this)">apply</button>
+                    <button onclick="editCell(this)">edit</button>
+                    <button onclick="deleteCell(this)" disabled>delete</button>
                 </div>
             </div>
 
