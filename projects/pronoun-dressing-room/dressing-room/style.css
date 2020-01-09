@@ -30,10 +30,15 @@
     background-color: white;
 }
 
+
+/* ====================================================================== */
+
+
 #textholder {
     position: static;
     width: 70%;
     /* min-width: 500px; */
+    text-align: center;
 
     min-height: 500px;
 
@@ -44,7 +49,55 @@
 
     background-color: rgb(233, 233, 233);
     border: 3px solid black;
+
+    padding: 25px;
 }
+
+.textbox {
+    background-color: lightsteelblue;
+
+    margin-bottom: 25px;
+
+    width: 100%;
+
+    display: inline-block;
+}
+
+.textbox .textbox_buttonbox {
+    margin:10px;
+
+    text-align: right;
+}
+
+.textbox .textbox_textalignmentdiv {
+    margin: 20px;
+    margin-bottom: 0px;
+
+    text-align: left;
+}
+
+.textbox .textbox_textalignmentdiv p {
+    display: block;
+}
+
+.textbox .textbox_textalignmentdiv textarea {
+    display: none;
+    width: 100%;
+    resize: vertical;
+
+    height: 5em;
+}
+
+
+
+
+#adder_button {
+    width: 70%;
+    background-color: pink;
+}
+
+
+
 
 #preset_pronoun_list {
     height: 100px;
@@ -55,18 +108,18 @@
     width: 100%;
 }
 
-#submitbutton {
-    background-color: #ffbb75;
-}
-
 .pnbox {
     width:100%;
 }
 
-input,select {
+#sidebar input,select {
     background-color: rgba(255,255,255,0.55);
 }
 
-button {
+#sidebar button {
     background-color: lightskyblue;
+}
+
+#sidebar #submitbutton {
+    background-color: #ffbb75;
 }
