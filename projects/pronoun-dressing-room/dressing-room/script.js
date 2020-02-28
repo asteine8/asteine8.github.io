@@ -8,6 +8,9 @@ function onpageload() {
     // Lets use pronouns by default
     document.getElementById("yespronounsradio").checked = true;
 
+    // Get default pronoun preset
+    setPresetPronouns();
+
     // Apply settings to textboxes
     submitChanges();
 }
