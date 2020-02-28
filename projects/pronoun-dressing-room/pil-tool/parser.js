@@ -78,9 +78,9 @@ function generateTaggedText() {
                     // Check the PRP matches expected pronoun
                     if (taggedwords[w][0].toLowerCase().match(pronounSet[2])) {
                         if (w==0||taggedwords[w-1][1]==".") {
-                            taggedwords[w][0] = taggedwords[w][0].replace(subregex, "{Pod}");
+                            taggedwords[w][0] = "{Pod}";
                         } else {
-                            taggedwords[w][0] = taggedwords[w][0].replace(subregex, "{pod}");
+                            taggedwords[w][0] = "{pod}";
                         }
                     }
                 }
@@ -91,9 +91,9 @@ function generateTaggedText() {
                 if (taggedwords[w+1][1].match(/JJ/i) && taggedwords[w+2][1].match(/NN/i)) {
                     if (taggedwords[w][0].toLowerCase().match(pronounSet[2])) {
                         if (w==0||taggedwords[w-1][1]==".") {
-                            taggedwords[w][0] = taggedwords[w][0].replace(subregex, "{Pod}");
+                            taggedwords[w][0] = "{Pod}";
                         } else {
-                            taggedwords[w][0] = taggedwords[w][0].replace(subregex, "{pod}");
+                            taggedwords[w][0] = "{pod}";
                         }
                     }
                 }
