@@ -105,6 +105,8 @@ function applyPronounsAndNameToText(text) {
             text = text.replace(/{pod}/g, pronouns[0][2]);
             text = text.replace(/{pop}/g, pronouns[0][3]);
             text = text.replace(/{ref}/g, pronouns[0][4]);
+            text = text.replace(/{Sub}/g, capitalizeFirstLetter(pronouns[0][0]));
+            text = text.replace(/{Pod}/g, capitalizeFirstLetter(pronouns[0][2]));
 
             text = text.replace(/{name}/g, name);
         }
@@ -117,10 +119,10 @@ function applyPronounsAndNameToText(text) {
 
     // Not using Pronouns, just slap in the name over everything
     else {
-        text = text.replace(/{sub}/g, name);
+        text = text.replace(/{sub}/gi, name);
         text = text.replace(/{obj}/g, name);
-        text = text.replace(/{pod}/g, name);
-        text = text.replace(/{pop}/g, name);
+        text = text.replace(/{pod}/gi, name+"'s");
+        text = text.replace(/{pop}/g, name+"'s");
         text = text.replace(/{ref}/g, name);
 
         text = text.replace(/{name}/g, name);
