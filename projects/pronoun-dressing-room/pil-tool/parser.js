@@ -47,7 +47,7 @@ function generateTaggedText() {
 
         // Check for Subjective PRP
         if (taggedwords[w][0].toLowerCase().match(subregex) && taggedwords[w][1].match(/PRP|NN/i)) {
-            taggedwords[w][0] = taggedwords[w][0].replace(subregex, "{sub}");
+            taggedwords[w][0] = taggedwords[w][0].replace(subregex, w==0||taggedwords[w-1][1]=="."?"{Sub}":"{sub}");
         }
 
         // Check if personal pronoun
@@ -73,7 +73,7 @@ function generateTaggedText() {
                 else if (taggedwords[w+1][1].match(/NN|RB/i)) {
                     // Check the PRP matches expected pronoun
                     if (taggedwords[w][0].toLowerCase().match(pronounSet[2])) {
-                        taggedwords[w][0] = "{pod}";
+                        taggedwords[w][0] = w==0||taggedwords[w-1][1]=="."?"{Pod}":"{pod}";
                     }
                 }
             }
@@ -82,7 +82,7 @@ function generateTaggedText() {
             if (w < taggedwords.length-2) {
                 if (taggedwords[w+1][1].match(/JJ/i) && taggedwords[w+2][1].match(/NN/i)) {
                     if (taggedwords[w][0].toLowerCase().match(pronounSet[2])) {
-                        taggedwords[w][0] = "{pod}";
+                        taggedwords[w][0] = w==0||taggedwords[w-1][1]=="."?"{Pod}":"{pod}";
                     }
                 }
             }
