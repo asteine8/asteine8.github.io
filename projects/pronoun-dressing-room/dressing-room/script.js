@@ -5,6 +5,15 @@ let usingPronouns = true;
 
 // Nice initialization function for lazy people
 function onpageload() {
+    //formatting for mobile devices
+    if (window.innerHeight>window.innerWidth) {
+        document.getElementById("sidebar").style.position="static";
+        document.getElementById("sidebar").style.width="100%";
+        document.getElementById("sidebar").style.maxWidth="90%";
+        document.getElementById("textholder").style.width="90%";
+        document.getElementById("spacer").style.minHeight=0;
+    }
+    
     // Lets use pronouns by default
     document.getElementById("yespronounsradio").checked = true;
 
