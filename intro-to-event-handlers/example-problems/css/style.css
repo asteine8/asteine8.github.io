@@ -1,0 +1,16 @@
+#codespace{
+    width:100%;
+    height: 300px;
+    min-height: 100px;
+    min-width: 50%;
+
+}
+
+body, button, textarea {
+    font-size: 20pt;
+}
+
+div {
+    margin-top:20px;
+    border: 3px solid maroon;
+}
