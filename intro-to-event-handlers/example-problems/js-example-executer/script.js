@@ -14,3 +14,20 @@ document.getElementById('executeButton').addEventListener('click', (e) => {
         alert(error);
     }
 });
+
+let showingSolution = false;
+let savedUserText = "";
+let solutionText = "";
+document.getElementById("showSolution").addEventListener('click', (e) => {
+    if (showingSolution) {
+        document.getElementById('codespace').value = savedUserText;
+        showingSolution = false;
+    }
+    else {
+        savedUserText = document.getElementById('codespace').value;
+        document.getElementById('codespace').value = document.getElementById('solutionText').value;
+        showingSolution = true;
+    }
+    
+
+});

@@ -15,10 +15,15 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia risus et rutrum vulputate. Donec et lorem sit amet nibh scelerisque ornare. Sed varius fermentum velit nec interdum. Curabitur eleifend aliquam massa, sed aliquet tellus. Aliquam odio velit, eleifend at tellus et, auctor ultrices mi. Pellentesque facilisis orci non nisl lacinia, vitae imperdiet quam gravida. Proin condimentum viverra congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
         <h2>Type your Code in Here:</h2>
-        <textarea id="codespace">asdas
-
-        </textarea>
+        <textarea spellcheck="false" id="codespace"></textarea>
         <button id="executeButton">Execute Code</button>
+        <button id="showSolution">Show Solution</button>
+
+        <textarea style="visibility: hidden;"id="solutionText">let toggle =1;
+document.getElementById("button1").addEventListener('click', (e) => {
+    e.target.style.color = toggle ? "green" : "black";
+    toggle = toggle ? 0 : 1;
+});</textarea>
 
         <div>
             Put Example Elements Here

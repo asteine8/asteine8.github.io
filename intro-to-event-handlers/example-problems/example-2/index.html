@@ -10,18 +10,22 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <h2>Example 1</h2>
+        <h2>Example 2</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia risus et rutrum vulputate. Donec et lorem sit amet nibh scelerisque ornare. Sed varius fermentum velit nec interdum. Curabitur eleifend aliquam massa, sed aliquet tellus. Aliquam odio velit, eleifend at tellus et, auctor ultrices mi. Pellentesque facilisis orci non nisl lacinia, vitae imperdiet quam gravida. Proin condimentum viverra congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Create an event listener that takes text from a textarea with id "<span class="codeblock">textInput1</span>" when the contents of the textarea changes and puts it into a paragraph with id "<span class="codeblock">textBox1</span>"
         </p>
         <h2>Type your Code in Here:</h2>
-        <textarea id="codespace">asdas
-
-        </textarea>
+        <textarea spellcheck="false" id="codespace"></textarea>
         <button id="executeButton">Execute Code</button>
+        <button id="showSolution">Show Solution</button>
+
+        <textarea style="visibility: hidden;"id="solutionText">document.getElementById("textInput1").addEventListener('input', (e) => {
+    document.getElementById("textBox1").innerHTML = e.target.value;
+});</textarea>
 
         <div>
-            Put Example Elements Here
+            <textarea id="textInput1"></textarea>
+            <p id="textBox1""></p>
         </div>
         
         <script src="../js-example-executer/script.js" async defer></script>
