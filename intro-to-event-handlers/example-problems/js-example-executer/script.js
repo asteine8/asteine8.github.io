@@ -17,7 +17,6 @@ document.getElementById('executeButton').addEventListener('click', (e) => {
 
 let showingSolution = false;
 let savedUserText = "";
-let solutionText = "";
 document.getElementById("showSolution").addEventListener('click', (e) => {
     if (showingSolution) {
         document.getElementById('codespace').value = savedUserText;
@@ -28,6 +27,4 @@ document.getElementById("showSolution").addEventListener('click', (e) => {
         document.getElementById('codespace').value = document.getElementById('solutionText').value;
         showingSolution = true;
     }
-    
-
 });

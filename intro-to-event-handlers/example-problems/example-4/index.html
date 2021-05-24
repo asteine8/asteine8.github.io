@@ -4,29 +4,29 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Example</title>
+        <title>Example 4</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <h2>Example 1</h2>
+        <h2>Example 4</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia risus et rutrum vulputate. Donec et lorem sit amet nibh scelerisque ornare. Sed varius fermentum velit nec interdum. Curabitur eleifend aliquam massa, sed aliquet tellus. Aliquam odio velit, eleifend at tellus et, auctor ultrices mi. Pellentesque facilisis orci non nisl lacinia, vitae imperdiet quam gravida. Proin condimentum viverra congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Delete any non-alphabetic characters entered into the text input with id "<span class="codeblock">textInput1</span>" when entered (when the text in the input element changes)
         </p>
         <h2>Type your Code in Here:</h2>
         <textarea spellcheck="false" id="codespace"></textarea>
         <button id="executeButton">Execute Code</button>
         <button id="showSolution">Show Solution</button>
 
-        <textarea style="visibility: hidden;"id="solutionText">let toggle =1;
-document.getElementById("button1").addEventListener('click', (e) => {
-    e.target.style.color = toggle ? "green" : "black";
-    toggle = toggle ? 0 : 1;
+        <textarea style="visibility: hidden;"id="solutionText">document.getElementById('textInput1').addEventListener('input', (e) => {
+    let currentText = e.target.value;
+    e.target.value = currentText.replace(/[^a-zA-Z]/g, "");
 });</textarea>
 
+
         <div>
-            Put Example Elements Here
+            <input type="text" id="textInput1" style="width: 300px; margin:20px; font-size: 18pt;">
         </div>
         
         <script src="../js-example-executer/script.js" async defer></script>

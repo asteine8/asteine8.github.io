@@ -4,29 +4,37 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Example</title>
+        <title>Example 3</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <h2>Example 1</h2>
+        <h2>Example 3</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia risus et rutrum vulputate. Donec et lorem sit amet nibh scelerisque ornare. Sed varius fermentum velit nec interdum. Curabitur eleifend aliquam massa, sed aliquet tellus. Aliquam odio velit, eleifend at tellus et, auctor ultrices mi. Pellentesque facilisis orci non nisl lacinia, vitae imperdiet quam gravida. Proin condimentum viverra congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Attach an event listener for the <span class="codeblock">mouseover</span> event to all elements with the class name "<span class="codeblock">pGroup1</span>". When this event happens, set the value of the textarea with id "<span class="codeblock">textBox1</span>" to the innerHTML of the element that is triggering the <span class="codeblock">mouseover</span> event
         </p>
         <h2>Type your Code in Here:</h2>
         <textarea spellcheck="false" id="codespace"></textarea>
         <button id="executeButton">Execute Code</button>
         <button id="showSolution">Show Solution</button>
 
-        <textarea style="visibility: hidden;"id="solutionText">let toggle =1;
-document.getElementById("button1").addEventListener('click', (e) => {
-    e.target.style.color = toggle ? "green" : "black";
-    toggle = toggle ? 0 : 1;
-});</textarea>
+        <textarea style="visibility: hidden;"id="solutionText">let pGroup1 = document.getElementsByClassName('pGroup1');
+function onMouseOver(e) {
+    let elementInnerHTML = e.target.innerHTML;
+    document.getElementById("textBox1").value = elementInnerHTML;
+}
+for (let p of pGroup1) {
+    p.addEventListener('mouseover', onMouseOver);
+}</textarea>
 
         <div>
-            Put Example Elements Here
+            <p class="pGroup1">Paragraph 1</p>
+            <p class="pGroup1">Paragraph 2</p>
+            <p class="pGroup1">Paragraph 3</p>
+            <p class="pGroup1">Paragraph 4</p>
+            <p class="pGroup1">Paragraph 5</p>
+            <textarea id="textBox1"></textarea>
         </div>
         
         <script src="../js-example-executer/script.js" async defer></script>
