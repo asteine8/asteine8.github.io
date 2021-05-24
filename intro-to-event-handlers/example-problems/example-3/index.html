@@ -18,6 +18,7 @@
         <textarea spellcheck="false" id="codespace"></textarea>
         <button id="executeButton">Execute Code</button>
         <button id="showSolution">Show Solution</button>
+        <button id="resetEventListeners">Reset Event Listeners</button>
 
         <textarea style="visibility: hidden;"id="solutionText">let pGroup1 = document.getElementsByClassName('pGroup1');
 function onMouseOver(e) {
@@ -38,5 +39,8 @@ for (let p of pGroup1) {
         </div>
         
         <script src="../js-example-executer/script.js" async defer></script>
+        <script>
+            document.getElementById('resetEventListeners').addEventListener('click', (e) => {removeEventListenersForClass("pGroup1")});
+        </script>
     </body>
 </html>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Example 1</title>
+        <title>Example</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/style.css">
@@ -12,13 +12,12 @@
     <body>
         <h2>Example 1</h2>
         <p>
-            Create an event handler for a button with id "<span class="codeblock">button1</span>" that toggles the color of the button between black and green when clicked
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia risus et rutrum vulputate. Donec et lorem sit amet nibh scelerisque ornare. Sed varius fermentum velit nec interdum. Curabitur eleifend aliquam massa, sed aliquet tellus. Aliquam odio velit, eleifend at tellus et, auctor ultrices mi. Pellentesque facilisis orci non nisl lacinia, vitae imperdiet quam gravida. Proin condimentum viverra congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
         <h2>Type your Code in Here:</h2>
         <textarea spellcheck="false" id="codespace"></textarea>
         <button id="executeButton">Execute Code</button>
         <button id="showSolution">Show Solution</button>
-        <button id="resetEventListeners">Reset Event Listeners</button>
 
         <textarea style="visibility: hidden;"id="solutionText">let toggle =1;
 document.getElementById("button1").addEventListener('click', (e) => {
@@ -27,19 +26,9 @@ document.getElementById("button1").addEventListener('click', (e) => {
 });</textarea>
 
         <div>
-            <button id="button1">Button 1</button>
+            Put Example Elements Here
         </div>
-
-        <!-- Solution:
-        let toggle =1;
-        document.getElementById("button1").addEventListener('click', (e) => {
-        e.target.style.color = toggle ? "green" : "black";
-        toggle = toggle ? 0 : 1;
-        }); -->
         
         <script src="../js-example-executer/script.js" async defer></script>
-        <script>
-            document.getElementById('resetEventListeners').addEventListener('click', (e) => {removeEventListener("button1")});
-        </script>
     </body>
 </html>

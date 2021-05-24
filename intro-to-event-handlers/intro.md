@@ -1,5 +1,11 @@
+---
+title: Event Handler Crash Course
+author: Maki Maki Baby
+date: May 23, 2021
+---
+
+
 # Event Handler Crash Course
-by Maki Maki Baby
 
 ## Basic Structure of Events
 ![](SRC/EventWhathappens.jpg)
@@ -69,6 +75,11 @@ myButton.AddEventListener('click', sayHai);
 ```
 
 ## Examples
+
+#### Easy Examples
+- [Example 01](./example-problems/example-01/index.html)
+
+#### Advanced Examples
 - [Example 1](./example-problems/example-1/index.html)
 - [Example 2](./example-problems/example-2/index.html)
 - [Example 3](./example-problems/example-3/index.html)

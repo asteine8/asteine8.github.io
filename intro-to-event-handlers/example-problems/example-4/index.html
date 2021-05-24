@@ -18,6 +18,7 @@
         <textarea spellcheck="false" id="codespace"></textarea>
         <button id="executeButton">Execute Code</button>
         <button id="showSolution">Show Solution</button>
+        <button id="resetEventListeners">Reset Event Listeners</button>
 
         <textarea style="visibility: hidden;"id="solutionText">document.getElementById('textInput1').addEventListener('input', (e) => {
     let currentText = e.target.value;
@@ -30,5 +31,8 @@
         </div>
         
         <script src="../js-example-executer/script.js" async defer></script>
+        <script>
+            document.getElementById('resetEventListeners').addEventListener('click', (e) => {removeEventListener("textInput1")});
+        </script>
     </body>
 </html>

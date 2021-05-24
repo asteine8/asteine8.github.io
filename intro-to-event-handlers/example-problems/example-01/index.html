@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Example</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <h2>Example 01</h2>
+        <p>
+            Add an event listener to the button with id "<span class="codeblock">myButton1</span>" that displays an alert when the button is clicked
+        </p>
+        <h2>Type your Code in Here:</h2>
+        <textarea spellcheck="false" id="codespace"></textarea>
+        <button id="executeButton">Execute Code</button>
+        <button id="showSolution">Show Solution</button>
+        <button id="resetEventListeners">Reset Event Listeners</button>
+
+        <textarea style="visibility: hidden;"id="solutionText">/*
+......................................__................................................
+.............................,-~*`¯lllllll`*~,..........................................
+.......................,-~*`lllllllllllllllllllllllllll¯`*-,....................................
+..................,-~*llllllllllllllllllllllllllllllllllllllllllll*-,..................................
+...............,-*llllllllllllllllllllllllllllllllllllllllllllllllllllll.\.......................... .......
+.............;*`lllllllllllllllllllllllllll,-~*~-,llllllllllllllllllll\................................
+..............\lllllllllllllllllllllllllll/.........\;;;;llllllllllll,-`~-,......................... ..
+...............\lllllllllllllllllllll,-*...........`~-~-,...(.(¯`*,`,..........................
+................\llllllllllll,-~*.....................)_-\..*`*;..)..........................
+.................\,-*`¯,*`)............,-~*`~................/.....................
+..................|/.../.../~,......-~*,-~*`;................/.\..................
+................./.../.../.../..,-,..*~,.`*~*................*...\.................
+................|.../.../.../.*`...\...........................)....)¯`~,..................
+................|./.../..../.......)......,.)`*~-,............/....|..)...`~-,.............
+..............././.../...,*`-,.....`-,...*`....,---......\..../...../..|.........¯```*~-,,,,
+...............(..........)`*~-,....`*`.,-~*.,-*......|.../..../.../............\........
+................*-,.......`*-,...`~,..``.,,,-*..........|.,*...,*...|..............\........
+...................*,.........`-,...)-,..............,-*`...,-*....(`-,............\.......
+......................f`-,.........`-,/...*-,___,,-~*....,-*......|...`-,..........\........ 
+*/
+document.getElementById("myButton1").addEventListener("click", (e)=>{alert("all your event belong to us");});
+</textarea>
+
+        <div>
+            <button id="myButton1">Button 1</button>
+        </div>
+        
+        <script src="../js-example-executer/script.js" async defer></script>
+        <script>
+            document.getElementById('resetEventListeners').addEventListener('click', (e) => {removeEventListener("myButton1")});
+        </script>
+    </body>
+</html>

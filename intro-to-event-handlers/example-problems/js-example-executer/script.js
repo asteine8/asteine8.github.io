@@ -3,6 +3,13 @@ function removeEventListeners(id) {
     let el = document.getElementById(id), elClone = el.cloneNode(true);
     el.parentNode.replaceChild(elClone, el);
 }
+function removeEventListenersForClass(className) {
+    let els = document.getElementsByClassName(className);
+    for (let element of els) {
+        let el = element, elClone = el.cloneNode(true);
+        el.parentNode.replaceChild(elClone, el);
+    }
+}
 
 document.getElementById('executeButton').addEventListener('click', (e) => {
     removeEventListeners('codespace');
