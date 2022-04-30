@@ -116,13 +116,17 @@ function applyPronounsAndNameToText(text) {
             text = text.replace(/{ref}/g, pronouns[0][4]);
             text = text.replace(/{Sub}/g, capitalizeFirstLetter(pronouns[0][0]));
             text = text.replace(/{Pod}/g, capitalizeFirstLetter(pronouns[0][2]));
-
-            text = text.replace(/{name}/g, name);
         }
 
         // Apply by sentence randomization
         else {
-
+            text = replaceRandom(text, "{sub}", 0, false);
+            text = replaceRandom(text, "{obj}", 1, false);
+            text = replaceRandom(text, "{pod}", 2, false);
+            text = replaceRandom(text, "{pop}", 3, false);
+            text = replaceRandom(text, "{ref}", 4, false);
+            text = replaceRandom(text, "{Sub}", 0, true );
+            text = replaceRandom(text, "{Pod}", 2, true );
         }
     }
 
@@ -133,10 +137,24 @@ function applyPronounsAndNameToText(text) {
         text = text.replace(/{pod}/gi, name+"'s");
         text = text.replace(/{pop}/g, name+"'s");
         text = text.replace(/{ref}/g, name);
-
-        text = text.replace(/{name}/g, name);
     }
 
+    //always happens
+    text = text.replace(/{name}/g, name);
+
+    return text;
+}
+
+//returns text with all instances of searchValue replaced with a random pronoun of the correct type
+function replaceRandom(text, searchValue, index, capitalize) {
+    let count = 0; //so there's no infinite loop for any reason
+    while(text.includes(searchValue) && count++ <= 1000) {
+        randomIndex = Math.floor(Math.random()*pronouns.length) //random number from 0 to (array length - 1) inclusive
+        if(capitalize)
+            text = text.replace(searchValue, capitalizeFirstLetter(pronouns[randomIndex][index]));
+        else
+            text = text.replace(searchValue, pronouns[randomIndex][index]);
+    }
     return text;
 }
 
